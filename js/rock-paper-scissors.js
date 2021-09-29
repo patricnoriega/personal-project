@@ -38,11 +38,18 @@ function win(user, computer) {
         result_p.innerHTML = convertToWord(user) + " beats " + convertToWord(computer) + " you win!";
     }
 }
-function lose(){
-
+function lose(user, computer){
+    for (var cpuScore = 0; cpuScore <= 1000; cpuScore++) {
+        userScore_span = userScore;
+        cpuScore_span = cpuScore;
+        result_p.innerHTML = convertToWord(user) + " loses to  " + convertToWord(computer) + " you lost...";
+    }
 }
-function draw(){
-console.log("draw");
+
+function draw(user, computer){
+    userScore_span = userScore;
+    cpuScore_span = cpuScore;
+    result_p.innerHTML = convertToWord(user) + " equals  " + convertToWord(computer) + " DRAW";
 }
 
 
