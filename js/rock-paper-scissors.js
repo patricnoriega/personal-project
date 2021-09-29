@@ -1,8 +1,8 @@
 console.log("helloo");
 
 // global variable:
-var userScore = 0;
-var cpuScore = 0;
+let userScore = 0;
+let cpuScore = 0;
 
 // DOM variables:
 var userScore_span = document.getElementById('user-Score');
@@ -18,7 +18,7 @@ function getCpuChoice(){
     var randomNumber = Math.floor(Math.random() * 3);
     return choices[randomNumber];
 }
-console.log(getCpuChoice());
+// console.log(getCpuChoice());
 
 function convertToWord(letter) {
     if (letter === "r"){
@@ -32,23 +32,21 @@ function convertToWord(letter) {
 }
 
 function win(user, computer) {
-    for (var userScore = 0; userScore <= 1000; userScore++) {
+        scoreBoard_div.innerHTML = userScore++
         userScore_span = userScore;
         cpuScore_span = cpuScore;
         result_p.innerHTML = convertToWord(user) + " beats " + convertToWord(computer) + " you win!";
-    }
+
 }
 function lose(user, computer){
-    for (var cpuScore = 0; cpuScore <= 1000; cpuScore++) {
+        scoreBoard_div.innerHTML = cpuScore++
         userScore_span = userScore;
         cpuScore_span = cpuScore;
         result_p.innerHTML = convertToWord(user) + " loses to  " + convertToWord(computer) + " you lost...";
-    }
+
 }
 
 function draw(user, computer){
-    userScore_span = userScore;
-    cpuScore_span = cpuScore;
     result_p.innerHTML = convertToWord(user) + " equals  " + convertToWord(computer) + " DRAW";
 }
 
