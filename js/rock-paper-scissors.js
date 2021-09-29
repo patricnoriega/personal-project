@@ -13,10 +13,24 @@ var rock_div = document.getElementById('rock');
 var paper_div = document.getElementById('paper');
 var scissors_div = document.getElementById('scissors');
 
+function getCpuChoice(){
+    var choices = ['rock', 'paper', 'scissors']
+    var randomNumber = Math.floor(Math.random() * 3);
+
+    return choices[randomNumber];
+}
+// console.log(getCpuChoice());
 
 function game(userChoice){                                              //console.logged to see click working..
-    console.log("🤡  " + userChoice);
-
+    // console.log("🤡  " + userChoice);
+    var computerChoice = getCpuChoice();
+    switch (userChoice + computerChoice) {
+        case "rock scissors":
+        case "paper rock":
+        case "scissors paper":
+            console.log('User Wins!!!');
+            break;
+    }
 }
 
 
