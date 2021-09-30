@@ -1,4 +1,34 @@
 console.log("helloo");
+var hackerCode = ""
+$(document).keyup(function(event){
+    console.log(event.keyCode);
+    hackerCode += event.key;
+    console.log(hackerCode);
+    if (hackerCode === "codeup"){
+        alert("you've been hacked! ")
+        $('body').css("background-image", "url('img/matrix.rain copy.jpeg')")
+        $('.score-board, .result, .badge, .choice, .choices').css('display', 'none')
+        $('#title, #heading, #message').css('display', 'none')
+        $('p').css('display', 'none')
+    }
+});
+
+var konamiCode = "ArrowUpArrowUpArrowDownArrowDownArrowLeftArrowRightArrowLeftArrowRightba"
+var userKeys = ''
+$(document).keyup(function(event){
+    console.log(event.key);
+    userKeys += event.key;
+    console.log(konamiCode);
+
+    if (userKeys == konamiCode){
+        // alert('easter egg found');
+        $('body').css("background-image", "url('img/giphy.gif')")
+        $('.score-board, .result, .badge, .choice, .choices .title .heading .message').css('display', 'none')
+        $('#title, #heading, #message').css('display', 'none')
+        $('p').css('display', 'none')
+
+    }
+});
 
 // global variable:
 let userScore = 0;
@@ -91,3 +121,27 @@ function main() {
     })
 }
 main();
+//
+// var hackerCode = ""
+// $(document).keyup(function(event){
+//     console.log(event.keyCode);
+//     hackerCode += event.key;
+//     console.log(hackerCode);
+//     if (hackerCode === "codeup"){
+//         alert("you've been hacked! ")
+//         $('body').css("background-image", "url('img/matrix.rain copy.jpeg')")
+//     }
+// });
+//
+// var konamiCode = "ArrowUpArrowUpArrowDownArrowDownArrowLeftArrowRightArrowLeftArrowRightba"
+// var userKeys = ''
+// $(document).keyup(function(event){
+//     console.log(event.key);
+//     userKeys += event.key;
+//     console.log(konamiCode);
+//
+//     if (userKeys == konamiCode){
+//         // alert('easter egg found');
+//         $('body').css("background-image", "url('img/giphy.gif')")
+//     }
+// });
