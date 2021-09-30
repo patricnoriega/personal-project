@@ -19,6 +19,10 @@ header > h1{
 .dontshow{
     display: none;
     color:#25272e;
+    margin: 1em;
+}
+.show{
+    margin: 1em;
 }
 .show:hover .dontshow{
     display : block;
