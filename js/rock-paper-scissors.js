@@ -1,4 +1,6 @@
 console.log("helloo");
+
+
 var hackerCode = ""
 $(document).keyup(function(event){
     console.log(event.keyCode);
